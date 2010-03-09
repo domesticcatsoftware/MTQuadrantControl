@@ -15,7 +15,6 @@ Initialize as follows in a UITableViewController or subclass (works best with ta
 <code>
   MTQuadrantControl * quadrantControl = [[[MTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
 	quadrantControl.delegate = self;
-	
 	[quadrantControl setNumber:[NSNumber numberWithInt:127]
 					   caption:@"following"
 						action:@selector(didSelectFollowingQuadrant)
@@ -35,7 +34,6 @@ Initialize as follows in a UITableViewController or subclass (works best with ta
 					   caption:@"favorites" 
 						action:@selector(didSelectFavoritesQuadrant)
 				   forLocation:BottomRightLocation];
-	
 	[self.tableSectionFooterView addSubview:quadrantControl];
 </code>
 
