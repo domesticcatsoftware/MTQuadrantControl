@@ -51,9 +51,9 @@ typedef enum {
 	avatarView.layer.masksToBounds = YES;
 	avatarView.layer.borderColor = [[UIColor clearColor] CGColor];
 	
-	self.tableSectionFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+	self.tableSectionFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 130)];
 	
-	MTQuadrantControl * quadrantControl = [[[MTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 100)] autorelease];
+	MTQuadrantControl * quadrantControl = [[[MTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
 	quadrantControl.delegate = self;
 	
 	[quadrantControl setNumber:[NSNumber numberWithInt:127]

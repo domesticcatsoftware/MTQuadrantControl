@@ -178,7 +178,7 @@
 		size_t num_locations = 2;
 		CGFloat locations[2] = {0.0, 1.0};
 		CGFloat components[8] = {0.000, 0.459, 0.968, 1.000,	//	#0075F6
-								 0.000, 0.265, 0.897, 1.000};	//	#0043E4
+			0.000, 0.265, 0.897, 1.000};	//	#0043E4
 		
 		CGColorSpaceRef rgbColorspace = CGColorSpaceCreateDeviceRGB();
 		CGGradientRef gradient = CGGradientCreateWithColorComponents(rgbColorspace, components, locations, num_locations);
@@ -221,16 +221,16 @@ static NSNumberFormatter * numberFormatter;
 - (void)drawRect:(CGRect)rect {
 	[(self.highlighted ? [UIColor whiteColor] : [UIColor blackColor]) set];
 	NSString * numberString = [self.numberFormatter stringFromNumber:self.number];
-	CGSize numberTextSize = [numberString sizeWithFont:[UIFont boldSystemFontOfSize:24]
-												  constrainedToSize:self.bounds.size];
+	CGSize numberTextSize = [numberString sizeWithFont:[UIFont boldSystemFontOfSize:22]
+									 constrainedToSize:self.bounds.size];
 	CGPoint numberDrawPoint = CGPointMake(round((self.bounds.size.width - numberTextSize.width) / 2.0), 3.0f);
 	[numberString drawAtPoint:numberDrawPoint 
-					 withFont:[UIFont boldSystemFontOfSize:24]];
+					 withFont:[UIFont boldSystemFontOfSize:22]];
 	
 	[(self.highlighted ? [UIColor whiteColor] : [UIColor darkGrayColor]) set];
 	CGSize captionTextSize = [self.caption sizeWithFont:[UIFont boldSystemFontOfSize:12]
 									  constrainedToSize:self.bounds.size];
-	CGPoint captionDrawPoint = CGPointMake(round((self.bounds.size.width - captionTextSize.width) / 2.0), 28.0f);
+	CGPoint captionDrawPoint = CGPointMake(round((self.bounds.size.width - captionTextSize.width) / 2.0), 27.0f);
 	[self.caption drawAtPoint:captionDrawPoint 
 					 withFont:[UIFont boldSystemFontOfSize:12]];
 }
