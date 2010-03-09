@@ -58,22 +58,22 @@ typedef enum {
 	
 	[quadrantControl setNumber:[NSNumber numberWithInt:127]
 					   caption:@"following"
-						action:@selector(didSelectQuadrant)
+						action:@selector(didSelectFollowingQuadrant)
 				   forLocation:TopLeftLocation];
 	
 	[quadrantControl setNumber:[NSNumber numberWithInt:1728]
 					   caption:@"tweets" 
-						action:@selector(didSelectQuadrant)
+						action:@selector(didSelectTweetsQuadrant)
 				   forLocation:TopRightLocation];
 	
 	[quadrantControl setNumber:[NSNumber numberWithInt:352] 
 					   caption:@"followers" 
-						action:@selector(didSelectQuadrant)
+						action:@selector(didSelectFollowersQuadrant)
 				   forLocation:BottomLeftLocation];
 	
 	[quadrantControl setNumber:[NSNumber numberWithInt:61] 
 					   caption:@"favorites" 
-						action:@selector(didSelectQuadrant)
+						action:@selector(didSelectFavoritesQuadrant)
 				   forLocation:BottomRightLocation];
 	
 	[self.tableSectionFooterView addSubview:quadrantControl];
@@ -82,8 +82,20 @@ typedef enum {
 #pragma mark -
 #pragma mark Actions
 
-- (void)didSelectQuadrant {
-	NSLog(@"didTouchQuadrant");
+- (void)didSelectFollowingQuadrant {
+	NSLog(@"Following");
+}
+
+- (void)didSelectTweetsQuadrant {
+	NSLog(@"Tweets");
+}
+
+- (void)didSelectFollowersQuadrant {
+	NSLog(@"Followers");
+}
+
+- (void)didSelectFavoritesQuadrant {
+	NSLog(@"Favorites");
 }
 
 

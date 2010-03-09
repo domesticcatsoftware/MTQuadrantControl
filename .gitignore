@@ -2,4 +2,4 @@
 *.pbxuser
 *.perspective 
 *.perspectivev3
-build/*
+*/build/*
