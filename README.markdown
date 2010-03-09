@@ -3,6 +3,7 @@ MTQuadrantControl
 
 ## A 4-way button disguised as a table cell, as seen in Tweetie 2
 
+![Screenshot of MTQuadrantControl](http://mattt.github.com/MTQuadrantControl/screenshot.png "MTQuadrantControl Screenshot")
 
 ## Demo
 
@@ -77,4 +78,4 @@ MTQuadrantControl is licensed under the MIT License:
   
 ## Credit
 
-Inspired entirely by [Tweetie 2 for iPhone](http://www.atebits.com/tweetie-iphone/), by [atebits](http://www.atebits.com/)
+Inspired entirely by the amazing [Tweetie 2 for iPhone](http://www.atebits.com/tweetie-iphone/), by [atebits](http://www.atebits.com/)
