@@ -114,6 +114,8 @@
 		case BottomLeftLocation:
 		case BottomRightLocation:
 			[delegate performSelector:[[self quadrantAtLocation:activeLocation] action]];
+		case NullQuadrant:
+			return;
 	}
 	
 	activeLocation = NullQuadrant;
@@ -135,12 +137,12 @@
 	CGContextFillRect(c, rect);
 	
 	// Vertical Divider
-	CGContextMoveToPoint(c, round(CGRectGetMidX(rect)), 0.0f);
-	CGContextAddLineToPoint(c, round(CGRectGetMidX(rect)), round(rect.size.height));
+	CGContextMoveToPoint(c, round(CGRectGetMidX(rect)) + 0.5f, 0.0f);
+	CGContextAddLineToPoint(c, round(CGRectGetMidX(rect)) + 0.5f, round(rect.size.height));
 	
 	// Horizontal Divider
-	CGContextMoveToPoint(c, 0.0f, round(CGRectGetMidY(rect)));
-	CGContextAddLineToPoint(c, round(rect.size.width), round(CGRectGetMidY(rect)));
+	CGContextMoveToPoint(c, 0.0f, round(CGRectGetMidY(rect)) + 0.5f);
+	CGContextAddLineToPoint(c, round(rect.size.width), round(CGRectGetMidY(rect)) + 0.5f);
 	
 	// TODO: Seems to be drawing on a pixel border; 1px crisp line would be ideal
 	CGContextSetLineWidth(c, 0.5f);
@@ -154,7 +156,7 @@
 	
 	// Draw gradient background for selected quadrant
 	if (activeLocation != NullQuadrant) {
-		CGRect activeRect;
+		CGRect activeRect = CGRectZero;
 		
 		switch (activeLocation) {
 			case TopLeftLocation:
@@ -172,6 +174,8 @@
 			case BottomRightLocation:
 				bottomRightQuadrant.highlighted = YES;
 				activeRect = bottomRightQuadrant.frame;
+				break;
+			case NullQuadrant:
 				break;
 		}
 		
